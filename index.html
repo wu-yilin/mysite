@@ -4,74 +4,162 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>十八君的个人网站</title>
-  </head>
-
-  <body
-    style="
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    "
-  >
-    <touxianglan
-      style="
-        width: 100%;
-        height: 160px;
+    <title>练习flex</title>
+    <style>
+      body {
+        margin: 0%;
+        height: 100vh;
         background-color: #eee;
+      }
+      /* * {
+        border: 1px solid black;
+      } */
+      .flex {
         display: flex;
-        align-items: center;
-        justify-content: center;
-      "
-    >
-      <img
-        src="https://i.328888.xyz/2023/03/02/FkkUZ.png"
-        alt="头像"
-        width="80px"
-        height="80px"
-    /></touxianglan>
-
-    <zhuneirong
-      style="
-        display: block;
-        padding: 30px;
-        max-width: 700px;
-        min-height: 70vh;
-        width: 90%;
-        letter-spacing: 1px;
-        line-height: 1.7;
-      "
-    >
-      <h1 align="center" ;class="hezi">Hello, World!</h1>
-      <p align="center" ;class="hezi">不知道写点什么内容1</p>
-      <p align="center" ;class="hezi">不知道写点什么内容2</p>
-      <p align="center" ;class="hezi">
-        <a href="https://space.bilibili.com/" target="_blank"
-          >BiliBili个人空间</a
-        >
-      </p>
-    </zhuneirong>
-
-    <dibulan
-      style="
-        width: 100%;
-        height: 160px;
-        background-color: #eee;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+      }
+      .baise {
+        background-color: white;
+      }
+      /* 阴影 */
+      .yinYing {
+        box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+          rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+      }
+      .flex1 {
+        flex: 1;
+      }
+      .flex3 {
+        flex: 3;
+      }
+      .column {
         flex-direction: column;
-      "
-    >
-      <p>
-        <a href="first.html" target="_blank">下一页</a>
-      </p>
-      <p>
-        <a href="https://eighteen-plus-eighteen.github.io/-/" target="_blank"
-          >个人网站</a
-        >
-      </p>
-    </dibulan>
+      }
+      .mg8 {
+        margin: 8px;
+      }
+      .mgr8 {
+        margin-right: 8px;
+      }
+      .mgt8 {
+        margin-top: 8px;
+      }
+      .daohang {
+        padding: 10px 20px;
+        border-bottom: 1px solid rgb(190, 190, 190);
+        font-size: 14px;
+        color: #666;
+      }
+      .quyu:hover {
+        transform: scale(1.05);
+      }
+      .quyu1:hover {
+        transform: scale(1.01);
+      }
+      .dise:hover {
+        background-color: #bebebe;
+      }
+      @media (max-width: 600px) {
+        .cebian {
+          display: none;
+        }
+        .neirong {
+          flex-direction: column;
+        }
+        .shujuqu {
+          flex-direction: column;
+        }
+        .youqu {
+          margin-left: 8px;
+        }
+        .shuju {
+          margin: 0 0 8px;
+          flex: auto;
+        }
+      }
+    </style>
+  </head>
+  <body class="flex">
+    <!-- 侧边栏 -->
+    <div style="width: 200px; z-index: 2" class="baise yinYing">
+      <!-- 头像栏 -->
+      <div
+        style="
+          padding: 10px;
+          align-items: center;
+          justify-content: center;
+          border-bottom: 1px solid #999;
+        "
+        class="flex"
+      >
+        <img
+          src="https://i.328888.xyz/2023/03/07/hhXIC.png"
+          width="40px"
+          height="40px"
+          alt="头像"
+        />
+        <div style="margin-left: 19px">十八加十八</div>
+      </div>
+      <!-- 导航栏 -->
+      <div class="flex1">
+        <div class="daohang dise">导航</div>
+        <div class="daohang dise">导航</div>
+        <div class="daohang dise">导航</div>
+        <div class="daohang dise">导航</div>
+        <div class="daohang dise">导航</div>
+        <div class="daohang dise">导航</div>
+      </div>
+    </div>
+    <!-- 主区域 -->
+    <div class="flex1 flex column">
+      <!-- 头部栏 -->
+      <div style="height: 60px; z-index: 1" class="baise yinYing"></div>
+      <!-- 内容区 -->
+      <div style="overflow: auto" class="flex flex1 neirong">
+        <!-- 左区 -->
+        <div style="flex: 3" class="flex column mg8">
+          <!-- 数据区 -->
+          <div class="flex shujuqu">
+            <!--数据块-->
+            <div
+              style="height: 100px"
+              class="shuju flex1 baise mgr8 yinYing quyu"
+            ></div>
+            <div
+              style="height: 100px"
+              class="shuju flex1 baise mgr8 yinYing quyu"
+            ></div>
+            <div
+              style="height: 100px"
+              class="shuju flex1 baise mgr8 yinYing quyu"
+            ></div>
+            <div
+              style="height: 100px"
+              class="shuju flex1 baise yinYing quyu"
+            ></div>
+          </div>
+          <!--列表区-->
+          <div calss="flex column">
+            <!--列表项-->
+            <div style="height: 160px" class="baise mgt8 yinYing quyu1"></div>
+            <div style="height: 160px" class="baise mgt8 yinYing quyu1"></div>
+            <div style="height: 160px" class="baise mgt8 yinYing quyu1"></div>
+            <div style="height: 160px" class="baise mgt8 yinYing quyu1"></div>
+            <div style="height: 160px" class="baise mgt8 yinYing quyu1"></div>
+            <div style="height: 160px" class="baise mgt8 yinYing quyu1"></div>
+            <div style="height: 160px" class="baise mgt8 yinYing quyu1"></div>
+            <div style="height: 160px" class="baise mgt8 yinYing quyu1"></div>
+            <div style="height: 160px" class="baise mgt8 yinYing quyu1"></div>
+          </div>
+        </div>
+        <!-- 右区 -->
+        <div style="flex: 1" class="youqu flex column mgr8 mgt8 quyu1">
+          <!--提示区-->
+          <div style="height: 150px" class="baise yinYing quyu1"></div>
+          <!--消息区-->
+          <div style="height: 300px" class="baise mgt8 yinYing quyu1"></div>
+          <div style="height: 300px" class="baise mgt8 yinYing quyu1"></div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
